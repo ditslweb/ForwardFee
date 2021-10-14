@@ -1,5 +1,5 @@
 # ForwardFee
 
-A Crypto Token to manage Financial transactions within the Forward Fee system.
+A Financial transactional App 
 
 2021 draft 

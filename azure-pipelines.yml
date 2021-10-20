@@ -18,7 +18,6 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'install gulp-cli -g'
-- task: gulp@0
 - task: Npm@1
   inputs:
     command: 'install'
@@ -27,4 +26,11 @@ steps:
     targets: 
     gulpjs: 'node_modules/gulp/bin/gulp.js'
     enableCodeCoverage: false
-  displayName: 'Run a multi-line script'
+
+- task: gulp@0
+  inputs:
+    gulpFile: 'gulpfile.js'
+    targets: 
+    arguments: 'build:dist'
+    gulpjs: 'node_modules/gulp/bin/gulp.js'
+    enableCodeCoverage: false

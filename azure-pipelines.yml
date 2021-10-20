@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'install gulp-cli -g'
+- task: gulp@0
+- task: Npm@1
+  inputs:
+    command: 'install'
+  inputs:
+    gulpFile: 'gulpfile.js'
+    targets: 
+    gulpjs: 'node_modules/gulp/bin/gulp.js'
+    enableCodeCoverage: false
+  displayName: 'Run a multi-line script'
